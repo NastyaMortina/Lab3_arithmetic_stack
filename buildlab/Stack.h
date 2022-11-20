@@ -6,7 +6,7 @@ using namespace std;
 
 template<class T>
 class Stack {
-    int size;//размер буфера
+    int size;//Г°Г Г§Г¬ГҐГ° ГЎГіГґГҐГ°Г 
     int cur;
     T* arr;
     void repackage() {
@@ -75,7 +75,7 @@ public:
     }
     void push(T x) {
         if (this->is_full()) {
-            //Делаем перепаковку, увеличиваем память в 2 раза
+            //Г„ГҐГ«Г ГҐГ¬ ГЇГҐГ°ГҐГЇГ ГЄГ®ГўГЄГі, ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ ГЇГ Г¬ГїГІГј Гў 2 Г°Г Г§Г 
             repackage();
         }
         arr[cur] = x;
