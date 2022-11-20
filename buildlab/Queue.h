@@ -5,7 +5,7 @@ using namespace std;
 
 template<class T>
 class Queue {
-    int size;//размер буфера
+    int size;//Г°Г Г§Г¬ГҐГ° ГЎГіГґГҐГ°Г 
     int start;
     int end;
     T* arr;
@@ -93,7 +93,7 @@ public:
     }
     void push(T x) {
         if (this->is_full()) {
-            //Делаем перепаковку, увеличиваем память в 2 раза
+            //Г„ГҐГ«Г ГҐГ¬ ГЇГҐГ°ГҐГЇГ ГЄГ®ГўГЄГі, ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ ГЇГ Г¬ГїГІГј Гў 2 Г°Г Г§Г 
             repackage();
         }
         end = next(end);
@@ -130,3 +130,4 @@ public:
         out << '\n';
         return out;
     }
+};    
